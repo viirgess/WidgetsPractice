@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_practice/component/utils/color_source.dart';
+import 'package:widgets_practice/component/widget/clip_r_rect_widget.dart';
+import 'package:widgets_practice/component/widget/inherited_model_widget.dart';
+import 'package:widgets_practice/component/widget/stream_builder_widget.dart';
+
 import 'package:widgets_practice/component/widget/tablet_widget.dart';
 
 class ThirdScreen extends StatelessWidget {
@@ -10,10 +14,14 @@ class ThirdScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.pink.shade900,
       body: SafeArea(
-        child: Column(
-          children: [
-            TabletWidget(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              TabletWidget(),
+              StreamBuilderWidget(),
+              ClipRRectWidget(),
+            ],
+          ),
         ),
       ),
     );

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_practice/component/utils/color_source.dart';
 import 'package:widgets_practice/component/widget/silver_app_bar_widget.dart';
-import 'package:widgets_practice/component/widget/tablet_widget.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({super.key});
@@ -11,7 +9,7 @@ class SecondScreen extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: <Widget>[
-          SilverAppBarWidget(), // Add the custom SliverAppBar here
+          const SilverAppBarWidget(),
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
@@ -19,7 +17,7 @@ class SecondScreen extends StatelessWidget {
                   title: Text('Item $index'),
                 );
               },
-              childCount: 100,
+              childCount: 10,
             ),
           ),
         ],
